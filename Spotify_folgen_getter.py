@@ -3,7 +3,6 @@ import time
 import spotify_credentials
 import spotipy
 import requests
-import sys
 from spotipy.oauth2 import SpotifyClientCredentials
 
 client_id = spotify_credentials.client_id
@@ -14,12 +13,30 @@ client_credentials_manager = SpotifyClientCredentials(client_id=client_id, clien
 sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
 
 
-print("Success")
-print(sys.version)
-print("==================================")
-
 artist_id = "3meJIgRw7YleJrmbpbJK6S" #Die drei ???
+datei_pfad = "C:\\Users\\Anwender\\Desktop\\Folgennamen_array.txt"
 
+for i in range(0, 20):
+    # NIE OHNE SLEEP!!!
+    albums = sp.artist_albums(artist_id, offset=i, limit=1)
+    time.sleep(1)
+    # NIE OHNE SLEEP!!!
+
+    # Folge fetchen
+    folgen_name = albums["items"][0]["name"]
+    if folgen_name.startswith("Folge"):
+        print(folgen_name)
+        with open(datei_pfad, "a",  encoding="utf-8") as file:
+            file.write(folgen_name + "\n")
+            print("wrote to file")
+    else:
+        print("Folge skiped")
+        continue
+
+
+
+
+"""
 for i in range(0,20):
     albums = sp.artist_albums(artist_id,offset=i, limit=1)
     time.sleep(1)
@@ -63,7 +80,7 @@ for i in range(0,20):
         file.write(properties)
         print("created file")
 
-
+"""
 
 
 
