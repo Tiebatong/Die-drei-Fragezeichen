@@ -19,9 +19,11 @@ artist_id = "3meJIgRw7YleJrmbpbJK6S" #Die drei ???
 def main():
 
     offset = 8
-    while offset < 180:
-        album = get_album(offset)
-
+    durchlauf = True
+    while durchlauf:
+        #album = get_album(offset)
+        album = get_album_from_name("175/Schattenwelt")
+        album = album["albums"]
         print(get_album_name(album))
         if not check_if_main_series(get_album_name(album)):
             print("keine main series Folge; Folge geskippt")
@@ -51,6 +53,7 @@ def main():
             print("Folge gespeichert")
 
         offset += 1
+        durchlauf = False
 
 
 def header_string_constructor():
@@ -61,10 +64,12 @@ def properties_string_constructor(album):
 
     release_date = "release_date: " + str(get_album_release_date(album))
     track_count = "track_count: " + str(get_album_track_count(album))
-    play_time = "play_time: " + str(get_album_playtime(album))
+    play_time = "play_time: " # + str(get_album_playtime(album))
     album_cover = "cover: \"[[" + str(get_album_name(album).replace("/", "_").replace(":", "_")) +".jpg]]\""
 
-    properties = "---" + "\n" + release_date + "\n" + track_count + "\n" + play_time + "\n" + album_cover + "\n" + "---" + "\n"
+    properties = "---" + "\n" + release_date + "\n" + track_count + "\n" + play_time + "\n" + album_cover + "\n" + "bewertung: 0,0" + "\n" + "---" + "\n"
+    print("properties constructed")
+
     return properties
 
 
@@ -119,10 +124,13 @@ def get_album_id(album):
     return album["items"][0]["id"]
 
 def get_album_name(album):
-    return album["items"][0]["name"]
+    try:
+        return album["items"][0]["name"]
+    except:
+        return album["albums"]["items"][0]["name"]
 
 def get_album_cover_url(album):
-    return album["items"][0]["images"][1]["url"] # [1] = medium resolution 300 * 300
+    return album["items"][0]["images"][0]["url"] # [1] = medium resolution 300 * 300
 
 def get_album_track_count(album):
     return album["items"][0]["total_tracks"]
