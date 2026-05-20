@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c57f07b5-5873-41f5-b949-a6b82fad6053" name="Changes" comment="spotify api folgen gatherer">
+    <list default="true" id="c57f07b5-5873-41f5-b949-a6b82fad6053" name="Changes" comment="lädt jetzt die höchste Auflösung von Cover herunter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Albumname_Downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Albumname_Downloader.py" afterDir="false" />
     </list>
@@ -102,7 +102,8 @@
       <workItem from="1778864757784" duration="5157000" />
       <workItem from="1779111467770" duration="13109000" />
       <workItem from="1779189397905" duration="9663000" />
-      <workItem from="1779280520596" duration="1049000" />
+      <workItem from="1779280520596" duration="2302000" />
+      <workItem from="1779288540046" duration="2889000" />
     </task>
     <task id="LOCAL-00001" summary="spotify api folgen gatherer">
       <option name="closed" value="true" />
@@ -152,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779218360085</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lädt jetzt die höchste Auflösung von Cover herunter">
+      <option name="closed" value="true" />
+      <created>1779281870314</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779281870314</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,18 +169,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="spotify api folgen gatherer" />
-    <option name="LAST_COMMIT_MESSAGE" value="spotify api folgen gatherer" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Albumname_Downloader.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="lädt jetzt die höchste Auflösung von Cover herunter" />
+    <option name="LAST_COMMIT_MESSAGE" value="lädt jetzt die höchste Auflösung von Cover herunter" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Wordle$Spot_api_test.coverage" NAME="Spot_api_test Coverage Results" MODIFIED="1778763281130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
@@ -179,6 +178,6 @@
     <SUITE FILE_PATH="coverage/Wordle$test.coverage" NAME="test Coverage Results" MODIFIED="1778780399808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spotify_API$create_new_playlist.coverage" NAME="create_new_playlist Coverage Results" MODIFIED="1778858056142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Spotify_API$Spotify_folgen_getter.coverage" NAME="Spotify_folgen_getter Coverage Results" MODIFIED="1779138063090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Spotify_API$Albumname_Downloader.coverage" NAME="Albumname_Downloader Coverage Results" MODIFIED="1779281331947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Spotify_API$Albumname_Downloader.coverage" NAME="Albumname_Downloader Coverage Results" MODIFIED="1779289982983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
