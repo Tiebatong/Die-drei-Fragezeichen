@@ -5,8 +5,6 @@ import spotipy
 import requests
 from spotipy.oauth2 import SpotifyClientCredentials
 
-
-
 # Authentication
 client_id = spotify_credentials.client_id
 client_secret = spotify_credentials.client_secret
@@ -18,8 +16,8 @@ artist_id = "3meJIgRw7YleJrmbpbJK6S" #Die drei ???
 
 def main():
 
-    offset = 174
-    while offset < 250:
+    offset = 289
+    while offset < 308:
         album = get_album(offset)
         #album = get_album_from_name("175/Schattenwelt")
         #album = album["albums"]
@@ -113,13 +111,14 @@ def check_if_main_series(album_name):
 
 def get_album(offset):
 
+
+    albums = sp.artist_albums(artist_id, offset=offset, limit=1)
+    return albums
     i = 30
     while i > 0:
         print("next request in " + str(i) + " seconds")
         time.sleep(1)
         i -= 1
-    albums = sp.artist_albums(artist_id, offset=offset, limit=1)
-    return albums
 
 def get_album_id(album):
     return album["items"][0]["id"]
