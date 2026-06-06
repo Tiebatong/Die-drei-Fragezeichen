@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c57f07b5-5873-41f5-b949-a6b82fad6053" name="Changes" comment="time.sleep() weiter verlängert">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Albumname_Downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Albumname_Downloader.py" afterDir="false" />
-    </list>
+    <list default="true" id="c57f07b5-5873-41f5-b949-a6b82fad6053" name="Changes" comment="time.sleep() weiter verlängert" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,6 +119,7 @@
       <workItem from="1780410664800" duration="1174000" />
       <workItem from="1780592486265" duration="2329000" />
       <workItem from="1780675290996" duration="2797000" />
+      <workItem from="1780751982920" duration="560000" />
     </task>
     <task id="LOCAL-00001" summary="spotify api folgen gatherer">
       <option name="closed" value="true" />

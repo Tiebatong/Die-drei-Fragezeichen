@@ -114,11 +114,7 @@ def get_album(offset):
 
     albums = sp.artist_albums(artist_id, offset=offset, limit=1)
     return albums
-    i = 30
-    while i > 0:
-        print("next request in " + str(i) + " seconds")
-        time.sleep(1)
-        i -= 1
+
 
 def get_album_id(album):
     return album["items"][0]["id"]
