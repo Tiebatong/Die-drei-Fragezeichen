@@ -16,17 +16,18 @@ artist_id = "3meJIgRw7YleJrmbpbJK6S" #Die drei ???
 
 def main():
 
-    offset = 289
-    while offset < 308:
-        album = get_album(offset)
-        #album = get_album_from_name("175/Schattenwelt")
-        #album = album["albums"]
+    print("=============================")
+    create_file_from_title("Das Dorf der Teufel")
+    print("=============================")
+
+
+def create_file_from_title(name):
+    offset = 1
+    while offset < 2:
+        #album = get_album(offset)
+        album = get_album_from_name(name)
+        album = album["albums"]
         print(get_album_name(album))
-        print("offset: " + str(offset))
-        if not check_if_main_series(get_album_name(album)):
-            print("keine main series Folge; Folge geskippt")
-            offset += 1
-            continue
 
 
         # cover speichern
