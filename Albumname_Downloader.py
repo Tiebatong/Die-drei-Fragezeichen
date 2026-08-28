@@ -17,7 +17,7 @@ artist_id = "3meJIgRw7YleJrmbpbJK6S" #Die drei ???
 def main():
 
     print("=============================")
-    create_file_from_title("Das Dorf der Teufel")
+    create_file_from_title("und der dreiäugige Totenkopf")
     print("=============================")
 
 
