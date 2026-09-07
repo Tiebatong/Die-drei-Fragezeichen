@@ -17,7 +17,7 @@ artist_id = "3meJIgRw7YleJrmbpbJK6S" #Die drei ???
 def main():
 
     print("=============================")
-    create_file_from_title("und der dreiäugige Totenkopf")
+    create_file_from_title("und das kalte Auge")
     print("=============================")
 
 
@@ -48,16 +48,22 @@ def create_file_from_title(name):
 
 
             file.write(properties_string_constructor(album))
+            file.write(add_image_view(folgen_name))
             file.write(header_string_constructor())
             print("Folge gespeichert")
 
         offset += 1
 
-
+def add_image_view(folgen_name):
+    image_view = "![[" + folgen_name + ".jpg]]\n\n"
+    print("added image")
+    return image_view
 
 def header_string_constructor():
-    return "\n" + "### Zusammenfassung" + "\n\n" + "### Handlung" + "\n\n" + "### Gedanken" + "\n\n" + "### Tags" + "\n\n"
-
+    
+    header = "\n" + "### Zusammenfassung" + "\n\n" + "### Handlung" + "\n\n" + "### Gedanken" + "\n\n" + "### Orte" + "\n\n" + "### Personen" + "\n\n" +  "### Tags" + "\n\n"
+    print("header construted")
+    return header
 
 def properties_string_constructor(album):
 
@@ -66,7 +72,7 @@ def properties_string_constructor(album):
     play_time = "play_time: "  + str(get_album_playtime(album))
     album_cover = "cover: \"[[" + str(get_album_name(album).replace("/", "_").replace(":", "_")) +".jpg]]\""
 
-    properties = "---" + "\n" + release_date + "\n" + track_count + "\n" + play_time + "\n" + album_cover + "\n" + "bewertung: 0,0" + "\n" + "---" + "\n"
+    properties = "---" + "\n" + release_date + "\n" + track_count + "\n" + play_time + "\n" + album_cover + "\n" + "times_listened_counter: 1" + "\n" + "bewertung: 0,0" + "\n" + "---" + "\n"
     print("properties constructed")
 
     return properties
